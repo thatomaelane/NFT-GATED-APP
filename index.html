@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NFT Access Pass</title>
+  <style>
+    body {
+      background-color: #0b0c63;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      text-align: center;
+    }
+    .container {
+      background-color: #10188f;
+      max-width: 600px;
+      margin: auto;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.3);
+    }
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 1rem 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #4fc3f7;
+      color: #0b0c63;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .hidden {
+      display: none;
+    }
+    a {
+      color: #4fc3f7;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>T Maelane NFT Access Pass</h1>
+    <p>Enter your wallet address to unlock exclusive content:</p>
+
+    <input type="text" id="walletInput" placeholder="e.g. 0x123...">
+    <button onclick="checkAccess()">Access Content</button>
+
+    <p id="message" class="hidden"></p>
+
+    <div id="exclusiveContent" class="hidden" style="margin-top: 2rem;">
+      <h2>🎉 Welcome to Bravo Studios!</h2>
+      <p>Dear Applicant,</p>
+      <p>
+        We are thrilled to welcome you as a future member of Bravo Studios. Explore our work:
+      </p>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="https://www.youtube.com/@thatomaelane" target="_blank">YouTube</a></li>
+        <li><a href="https://www.behance.net/thatomaelane" target="_blank">Behance</a></li>
+        <li><a href="https://medium.com/@thatomaelane" target="_blank">Medium</a></li>
+        <li><a href="https://www.linkedin.com/in/thatomaelane/" target="_blank">LinkedIn</a></li>
+      </ul>
+      <p>Kind regards,<br/>Bravo Studios</p>
+    </div>
+  </div>
+
+  <script>
+    const myAddress = "0xA6acbb8E00c2c7402271BD319a80B144A439E0E8".toLowerCase();
+
+    function checkAccess() {
+      const input = document.getElementById("walletInput").value.trim().toLowerCase();
+      const message = document.getElementById("message");
+      const content = document.getElementById("exclusiveContent");
+
+      if (input === myAddress) {
+        content.classList.remove("hidden");
+        message.classList.add("hidden");
+      } else {
+        content.classList.add("hidden");
+        message.classList.remove("hidden");
+        message.textContent = "❌ Access Denied. Buy Thato Maelane’s NFT to unlock this content.";
+      }
+    }
+  </script>
+</body>
+</html>
