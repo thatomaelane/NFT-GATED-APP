@@ -1,6 +1,6 @@
 # 🎟️ NFT-GATED-APP
 
-A sleek, educational web app that simulates an **NFT-gated content portal** without requiring blockchain interaction. Users unlock exclusive content by typing a specific Ethereum address — no MetaMask or blockchain transactions needed.
+A web app that simulates an **NFT-gated content portal** Users unlock exclusive content by typing a specific Ethereum address 
 
 ---
 
@@ -29,11 +29,11 @@ This is a beginner-friendly, client-side project that introduces the concept of 
 ## ✨ Features
 
 - 🔐 Simulated NFT-gated access
-- 💻 Simple HTML/CSS/JavaScript architecture
+- 💻 Simple HTML/CSS/JavaScript/ABI architecture
 - 🧪 Fully client-side — no server, no build tools
 - 🧾 ABI file included for contract-based extension (optional)
 - 🎨 Responsive, modern UI with custom visuals
-- 🚫 No MetaMask or blockchain connection required
+  
 
 ---
 
